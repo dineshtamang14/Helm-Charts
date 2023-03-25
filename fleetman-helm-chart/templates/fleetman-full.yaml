@@ -14,8 +14,8 @@ spec:
         app: webapp
     spec:
       containers:
-          {{- template "webappImage" . }}
-
+          {{- include "webappImage" . | indent 8 }}
+      
 
 ---
 apiVersion: v1
