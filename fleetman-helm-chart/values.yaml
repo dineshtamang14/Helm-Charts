@@ -1,4 +1,4 @@
 webapp:
    numberOfWebAppReplicas: 2
 
-dockerRepoName: richardchesteRwooD
+dockerRepoName: richardchesterwood
