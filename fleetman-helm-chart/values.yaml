@@ -2,3 +2,5 @@ webapp:
    numberOfWebAppReplicas: 2
 
 dockerRepoName: richardchesterwood
+
+developement: true
