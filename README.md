@@ -47,3 +47,18 @@ helm upgrade monitoring prom-repo/kube-prometheus-stack --set grafana.adminPassw
 helm upgrade monitoring prom-repo/kube-prometheus-stack --values=values.yml
 ```
 
+### To download charts from artifact hub
+```sh
+helm pull prom-repo/kube-prometheus-stack --untar=true
+```
+
+### To run downloaded charts
+```sh
+helm install monitoring ./kube-prometheus-stack
+```
+
+### To upgrade cluster with override values
+```sh
+helm upgrade monitoring --values=myvalues.yaml .
+```
+
