@@ -62,3 +62,13 @@ helm install monitoring ./kube-prometheus-stack
 helm upgrade monitoring --values=myvalues.yaml .
 ```
 
+### To Generate kubernetes yml from charts
+```sh
+helm template monitoring ./kube-prometheus-stack --values=./kube-prometheus-stack/myvalues.yml > monitoring-stack.yaml
+```
+
+### To create a own helm chart
+```sh
+helm create fleetman-helm-chart
+```
+
