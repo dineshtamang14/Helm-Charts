@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp
+  name: {{ .Release.Name }}-webapp
 spec:
   selector:
     matchLabels:
@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: fleetman-webapp
+  name: {{ .Release.Name }}-fleetman-webapp
 
 spec:
   selector:
@@ -30,6 +30,6 @@ spec:
   ports:
     - name: http
       port: 80
-      nodePort: 30080
+      nodePort: {{ default "30001" .Values.webapp.nodePort }}
 
   type: NodePort

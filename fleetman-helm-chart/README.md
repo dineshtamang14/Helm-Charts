@@ -10,4 +10,13 @@ helm create fleetman-helm-chart
 helm template . --set webapp.numberOfWebAppReplicas=4
 ```
 
+### To Run our own local charts
+```sh
+helm install my-fleetman-release . --set development=true
+```
+
+### To update running charts
+```sh
+helm upgrade my-fleetman-release . --set development=false
+```
 
